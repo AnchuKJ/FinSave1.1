@@ -1,0 +1,105 @@
+
+.maindiv{
+    min-height:658px;   
+    border-radius: 16px;
+    opacity: .9;
+    margin: 0px 50px 0px 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    .headertext{
+        color: #57146e;
+        position: absolute;
+        margin: 39px;
+        font-size: 12pt;
+        line-height: 2;
+        width: 60%;    
+    }
+    .headerbutton{
+        position: absolute;
+        border-radius: 16px 0px;
+        height: 50px;
+        background-color: white;
+        color: #57146e;
+        bottom: 340px;
+        right: 300px;
+        width: 180px;
+        font-weight: bold;
+        box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    }
+    .headerimg{
+        height: 450px;
+        width: 100%;
+        border-radius: 16px 16px 0px 0px;
+    }
+    .rightdiv{
+        background: linear-gradient(to bottom, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+        //background-image: linear-gradient(to bottom, #a148b9, #9c3eb5, #9633b2, #9126ae, #8b16aa);
+        border-radius: 0px 15px 15px 0px;
+        padding: 30px;
+        .righttitle{
+            color: white;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        .goallist{
+            margin-top: 25px;
+            color: white;
+            line-height: 1.8;
+            border-bottom: solid 1px #E5DAE5;
+            padding-bottom: 5px;
+            .round{
+                background-image: linear-gradient(to bottom, #d713e0, #d473f7, #d8a8ff, #e6d5ff, #ffffff);
+                border-radius: 50%; 
+                margin: 12px;
+                max-height: 30px;
+                max-width: 30px;
+            }
+            .goaltitle{
+                font-size: 12pt;
+                font-weight: bold;
+                
+            }
+            .caption{
+                font-size: 10pt;
+                opacity: .8;
+            }
+            .goalvalue{
+                font-size: 11pt;    
+            }
+            .viewbutton{
+                background-color: #d713e0;
+                border-radius: 16px 0px 16px 0px;
+                color: white;
+            }
+        }
+        
+    }
+
+    .box{
+        margin: 10px 60px 40px 60px;
+        border-radius: 15px;
+        padding: 15px 0px 0px 10px;
+        box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+        color: white;
+        .accounttitle{           
+           
+        }
+        .accountvalue{
+            font-size: 10pt;
+            opacity: 0.9;
+        }
+        .accountdesc{
+            font-size: 9pt;
+            opacity: 0.6;
+        }
+    }
+    .box1{
+        background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+    }
+    .box2{
+        background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+    }
+    .box3{
+        background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+    }
+}

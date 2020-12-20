@@ -1,0 +1,38 @@
+<div id="login-form" fxLayout="column">
+        
+    <div class="logo" >
+        <img height="95" src="assets/finsave.png">
+    </div>
+
+    <form name="loginForm" [formGroup]="loginForm" fxLayout="column" novalidate>
+
+        <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput formControlName="username">
+            <mat-icon matSuffix class="secondary-text">account_circle</mat-icon>
+            
+            <mat-error>
+               User Name is required
+            </mat-error>    
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+            <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
+            <mat-error>
+                Password is required
+            </mat-error>
+        </mat-form-field>
+
+             
+        <button mat-raised-button color="accent" class="submit-button" aria-label="LOGIN" (click)="LoginUser()"
+                [disabled]="loginForm.invalid">
+            LOGIN
+        </button>
+
+    </form>
+
+    
+
+</div>

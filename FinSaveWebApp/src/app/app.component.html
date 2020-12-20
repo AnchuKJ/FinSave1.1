@@ -1,0 +1,18 @@
+<ng-container>
+  <div fxLayout="column" class="mainContent">
+    <div class="headerRow" fxFlex="20" fxLayout="row" *ngIf="showHead">
+      <div fxFlex="10"></div>
+      <div  fxFlex="37"><img height="85" src="assets/finsave.png"></div>
+      <app-navigation fxFlex="30"></app-navigation>
+    </div>
+  
+    <div fxLayout="row" fxFlex="100">
+      <div fxLayoutAlign="center center" fxFlex="100">        
+        <div class="content-padding" fxFlex="80">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

@@ -1,0 +1,43 @@
+app-navigation{
+    border-radius: 20px;
+    opacity: .9;
+    margin: auto;
+    .mat-toolbar{        
+        background: none;
+    }
+    .mat-toolbar-row{
+        padding:0px;
+        height:62px;
+    }
+    a{
+        text-decoration: none;
+        width:120px;        
+        padding-left: 10px;
+        margin-right: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: #57146e;
+        opacity: .9;
+        line-height: 3;
+
+        &.active{
+            background-color: #C137A2 ;
+            border-radius: 4px;
+            color: #ffffff;
+            opacity: .9;
+        }
+
+        .mat-icon{
+            vertical-align: middle;
+            margin-right:10px;
+        }
+        img{
+            vertical-align: middle;
+            margin-right:15px;
+        }
+    }
+
+
+   
+}

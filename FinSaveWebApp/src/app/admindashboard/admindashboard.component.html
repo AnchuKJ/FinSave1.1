@@ -1,0 +1,95 @@
+<div fxLayout="column" class="admindashboardmain">
+    <div class="adminfirstrow" fxLayout="row">
+        <div fxFlex="50" class="adminfirst">
+            <div fxFlex="35" class="adminbox adminbox1"><mat-icon>shopping_cart</mat-icon></div>
+            <div fxFlex="65" class="adminsubbox adminsubbox1">
+                <div class="admintitle">{{admindata.completedcampaigns}}</div>
+                <div class="adminvalue">Active Campaigns</div>
+            </div>
+        </div>
+        <div fxFlex="50" class="adminfirst">
+            <div fxFlex="35" class="adminbox adminbox2"><mat-icon>shopping_cart</mat-icon></div>
+            <div fxFlex="65" class="adminsubbox adminsubbox2">
+                <div class="admintitle">12</div>
+                <div class="adminvalue">Completed Campaigns</div>
+            </div>
+        </div>
+       
+    </div>
+    <div fxLayout="row">
+        <div fxFlex="50" class="adminsecondrow">
+            <div>Recent Campaigns</div>
+            <ngx-charts-bar-vertical-2d 
+                [results]="admindata.recentcampaigns"
+                [xAxisLabel]="''"
+                [yAxisLabel]="'Fund'"
+                [trimLabels]="true"
+                [maxLabelLength]="30"
+                [legend]="false"
+                [scheme]="colorScheme"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [gradient]="true">
+            </ngx-charts-bar-vertical-2d>
+        </div>
+        <div fxFlex="49" class="adminsecondrow1">
+            <div>Campaign Summary</div>
+            <ngx-charts-pie-chart 
+                [results]="admindata.piedata"
+                [legend]="false"
+                [scheme]="colorScheme"
+                [gradient]="true" 
+                [labels]="true" >
+            </ngx-charts-pie-chart>
+        </div>
+    </div>
+    <div class="predictiontitle">Prediction Vs Actual</div>
+    <div fxLayout="row" fxFlex="30">
+        <div fxFlex="24" class="footerbox footerbox1">
+            <div class="guagetitle">COVID Relief fund</div>
+            <ngx-charts-area-chart 
+                [results]="areachartdata"
+                [legend]="FALSE"
+                [gradient]="false" 
+                [labels]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showGridLines]="false" ></ngx-charts-area-chart>    
+        </div>
+        <div fxFlex="23" class="footerbox footerbox2">
+            <div class="guagetitle">My Neighborhood</div>
+            <ngx-charts-area-chart 
+                [results]="areachartdata"
+                [legend]="FALSE"
+                [gradient]="false" 
+                [labels]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showGridLines]="false" ></ngx-charts-area-chart>    
+        </div>
+        <div fxFlex="23" class="footerbox footerbox3">
+            <div class="guagetitle">UNICEF Hunger fund</div>
+            <ngx-charts-area-chart 
+                [results]="areachartdata"
+                [legend]="false"
+                [gradient]="false" 
+                [labels]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showGridLines]="false" ></ngx-charts-area-chart>    
+        </div>
+        <div fxFlex="24" class="footerbox footerbox4">
+            <div class="guagetitle">PFA fund</div>
+            <ngx-charts-area-chart 
+                [results]="areachartdata"
+                [legend]="FALSE"
+                [gradient]="false" 
+                [labels]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showGridLines]="false" ></ngx-charts-area-chart>    
+        </div>
+    </div>
+</div>

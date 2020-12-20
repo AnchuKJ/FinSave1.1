@@ -1,0 +1,21 @@
+
+
+
+<mat-toolbar *ngIf="isAdmin">    
+    <mat-toolbar-row>
+        <a [routerLink]="'admindashboard'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Report">account_box</mat-icon><span>Dashboard</span></a>
+        <a [routerLink]="'newcampaign'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Dashboard">thumb_up</mat-icon><span>FinSave</span></a>
+        <a [routerLink]="'lenderdashboard'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Dashboard">analytics</mat-icon><span>Transaction</span></a>
+        <a [routerLink]="'login'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Support">login</mat-icon><span>Logout</span></a>
+    </mat-toolbar-row>
+  
+</mat-toolbar>  
+<mat-toolbar *ngIf="!isAdmin">    
+        <mat-toolbar-row>
+            <a [routerLink]="'dashboard'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Report">account_box</mat-icon><span>Dashboard</span></a>
+            <a [routerLink]="'mygoalboard'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Dashboard">thumb_up</mat-icon><span>FinSave</span></a>
+            <a [routerLink]="'lenderdashboard'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Dashboard">analytics</mat-icon><span>Transaction</span></a>
+            <a [routerLink]="'login'" [routerLinkActive]="['active']"><mat-icon aria-hidden="false" aria-label="Support">login</mat-icon><span>Logout</span></a>
+        </mat-toolbar-row>
+      
+    </mat-toolbar>  

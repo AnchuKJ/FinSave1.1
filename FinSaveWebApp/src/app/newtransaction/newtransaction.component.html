@@ -1,0 +1,69 @@
+<div class="newtransactionwindow" fxLayout="row">
+    <div class="firstdetail" fxFlex="70" fxLayout="column">
+        <div class="transactiontitle">Add new Transaction</div>
+        <div>
+            <div fxLayout="row">
+                <div fxFlex="40" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">From Account</div>
+                    <div class="leftdesc">Select your account to transfer funds from.</div>    
+                </div>
+                <div fxFlex="30" class="rightsection">              
+                    <select>
+                        <option>{{selectedAccount.accNum}}</option>
+                    </select>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="40" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">To Account</div>
+                    <div class="leftdesc">Select account to which you want to transfer funds.</div>    
+                </div>
+                <div fxFlex="30" class="rightsection">              
+                    <select >
+                        <option *ngFor="let acc of accounts">{{acc.accNum}}</option>
+                    </select>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="40" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">Amount to transfer</div>
+                    <div class="leftdesc">Enter the amount to transfer.</div>    
+                </div>
+                <div fxFlex="30" class="rightsection">              
+                    <input [(ngModel)]="amount">
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="40" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">Remarks</div>
+                    <div class="leftdesc">Enter the remarks for this transaction.</div>    
+                </div>
+                <div fxFlex="30" class="rightsection">              
+                    <input [(ngModel)]="remarks">
+                </div>
+            </div>
+            <div fxLayout="row" class="buttonsection">
+                <div fxFlex="40"  fxLayout="column">
+                        
+                </div>
+                <div fxFlex="60" fxLayout="row">
+                    <div class="cancel" (click)="onCancel()">Cancel</div>
+                    <div class="submit" (click)="onSubmit()">Apply</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightdetail" fxFlex="30" fxLayout="column">
+        <div class="accounttitle">Account Details</div>
+        <div class="accountvalue">{{selectedAccount.accName}}</div>
+        <div class="accountname">Account Type</div>
+        <div class="accountvalue">{{selectedAccount.accNum}}</div>
+        <div class="accountname">Account Number</div>
+        <div class="accountvalue">Lake Mary</div>
+        <div class="accountname">Branch Name</div>
+        <div class="accountvalue">${{selectedAccount.balance}}</div>
+        <div class="accountname">Outstanding Balance</div>
+        <div class="accountvalue">{{selectedAccount.intrest}}%</div>
+        <div class="accountname">Interest</div>
+    </div>
+</div>

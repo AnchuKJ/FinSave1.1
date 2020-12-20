@@ -1,0 +1,117 @@
+<!--<div fxLayout="row" class="maindiv">
+    <div class="scorediv" fxFlex="25">
+        <div class="title">Borrower</div>
+        <div class="avatardiv">
+           
+            <img src="assets/Avatarscombined.png">
+        </div>
+        <div class="usernamediv">{{borrowerData.personalData.name}}<mat-icon>keyboard_arrow_down</mat-icon></div>
+        <div class="applicant">Applicant</div>
+        <div class="persondetail">32y - Richmond, Texas</div>
+        <div class="itemmain">
+            <div class="itemdiv" fxLayout="row">
+                <div class="circlediv"></div>
+                <div class="datadiv" fxLayout="column">
+                    <div class="header">Income</div>
+                    <div class="child">{{borrowerData.personalData.income | currency}}</div>
+                </div>
+            </div>
+            <div class="itemdiv" fxLayout="row">
+                <div class="circlediv"></div>
+                <div class="datadiv" fxLayout="column">
+                    <div class="header">Ethnicity</div>
+                    <div class="child">{{borrowerData.personalData.ethnicity}}</div>
+                </div>
+            </div>
+            <div class="itemdiv" fxLayout="row">
+                <div class="circlediv"></div>
+                <div class="datadiv" fxLayout="column">
+                    <div class="header">Co-Applicant</div>
+                    <div class="child">{{borrowerData.personalData.coapplicant}}</div>
+                </div>
+            </div>
+            <div class="financebutton">Refinancing</div>
+        </div>
+    </div>
+   
+</div>-->
+
+<div fxLayout="row" class="maindiv">
+    <div fxFlex="100" fxLayout="column">
+        <div fxFlex="70">
+            <div class="headertext">Hey <span style="text-transform:capitalize">{{currentUser.username}}</span>,<br/>
+            <h1>Partner with us to contribute back to the society</h1>
+            Choose from a few tailor made social initiatives that appeal to you, and contribute. <br/>
+            Let FinSave round account balance to save small, and donate BIG. <br/>
+            <h2><a style="cursor:pointer" (click)="exploreGoal()">Click here to start!</a></h2>
+            </div>
+            <img class="headerimg" src="assets\header.jpg">
+
+        </div>
+        <div fxLayout="row" fxFlex="30">
+            <div fxFlex="30" fxLayout="column" (click) = "newtransaction(account)" class="box box{{i+1}}" *ngFor="let account of currentUser.accounts;let i = index">               
+                    <div class="accounttitle" fxFlex="30">{{account.accName}}</div>
+                    <div class="accountvalue">{{account.accNum}}</div>
+                    <div class="accountdesc" fxFlex="30">Account Number</div>
+                    <div fxLayout="row">
+                        <div fxLayout="column" fxFlex="60">
+                            <div class="accountvalue">${{account.balance}}</div>
+                            <div class="accountdesc" fxFlex="40">Balance</div>
+                        </div>
+                        <div fxLayout="column" fxFlex="40">
+                            <div class="accountvalue">{{account.intrest}}%</div>
+                            <div class="accountdesc" fxFlex="40">Interest</div>
+                        </div>
+                    </div>  
+            </div>
+           <!-- 
+            <div fxFlex="30" fxLayout="column" class="box box1">
+                <div class="accounttitle" fxFlex="30">Savings Account</div>
+                <div class="accountvalue">xxxxxxxxxx1234</div>
+                <div class="accountdesc" fxFlex="30">Account Number</div>
+                <div fxLayout="row">
+                    <div fxLayout="column" fxFlex="60">
+                        <div class="accountvalue">$4000</div>
+                        <div class="accountdesc" fxFlex="40">Balance</div>
+                    </div>
+                    <div fxLayout="column" fxFlex="40">
+                        <div class="accountvalue">5%</div>
+                        <div class="accountdesc" fxFlex="40">Interest</div>
+                    </div>
+                </div>               
+            </div>
+            <div fxFlex="30" fxLayout="column" class="box box2" (click) = "newtransaction()">
+                <div class="accounttitle" fxFlex="30">Checking Account</div>
+                <div class="accountvalue">xxxxxxxxxx4568</div>
+                <div class="accountdesc" fxFlex="30">Account Number</div>
+                <div fxLayout="row">
+                    <div fxLayout="column" fxFlex="60">
+                        <div class="accountvalue">$6000</div>
+                        <div class="accountdesc" fxFlex="40">Balance</div>
+                    </div>
+                    <div fxLayout="column" fxFlex="40">
+                        <div class="accountvalue">4%</div>
+                        <div class="accountdesc" fxFlex="40">Interest</div>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="30" fxLayout="column" class="box box3">
+                <div class="accounttitle" fxFlex="30">Loan Account</div>
+                <div class="accountvalue">xxxxxxxxxx8765</div>
+                <div class="accountdesc" fxFlex="30">Account Number</div>
+                <div fxLayout="row">
+                        <div fxLayout="column" fxFlex="60">
+                            <div class="accountvalue">$13000</div>
+                            <div class="accountdesc" fxFlex="40">Balance</div>
+                        </div>
+                        <div fxLayout="column" fxFlex="40">
+                            <div class="accountvalue">6.5%</div>
+                            <div class="accountdesc" fxFlex="40">Interest</div>
+                        </div>
+                    </div>
+            </div>
+        -->
+    </div>
+    </div>
+   
+</div>

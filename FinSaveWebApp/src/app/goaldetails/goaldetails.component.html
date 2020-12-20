@@ -1,0 +1,61 @@
+
+<div class="detailswindow" fxLayout="row">
+    <div class="firstdetail" fxFlex="70" fxLayout="column">
+        <div class="goaltitlearea" fxLayout="column" fxFlex="11">
+            <div class="goalname" >{{goal.capaignName}}</div>            
+        </div>
+        <div fxLayout="row" fxFlex="30">
+            <div fxFlex="30" fxLayout="column" class="box box1">
+                <div class="accountvalue" fxFlex="30">${{goal.targetAmount}}</div>
+                <div class="accountdesc">Targeted Goal Amount</div>                            
+            </div>
+            <div fxFlex="30" fxLayout="column" class="box box2">
+                <div class="accountvalue" fxFlex="30">${{goal.achievedAmount}}</div>
+                <div class="accountdesc">Raised Fund</div>                            
+            </div>
+            <div fxFlex="30" fxLayout="column" class="box box3">
+                <div class="accountvalue" fxFlex="30">{{goal.memCount}}</div>
+                <div class="accountdesc">Active Members</div>                            
+            </div>
+        </div>
+        <div fxFlex="50">
+                <div class="goaldesc">{{goal.campaignDesc}}</div>
+             <!-- <img src="assets/goalbanner.jpg" class="imgbanner" style="width:100%">-->
+        </div>
+    </div>
+    <div class="rightdetail" fxFlex="30" fxLayout="column">
+        <div fxFlex="5" class="goalrightdetail">
+            Goal Details
+        </div>
+        <div fxFlex="30" *ngIf="reportdata">
+            <ngx-charts-advanced-pie-chart 
+                [results]="reportdata"
+                [legend]="false"
+                [scheme]="colorScheme"
+                [gradient]="true" 
+                [labels]="false" >
+            </ngx-charts-advanced-pie-chart>
+        </div>
+        <div class="goaldetailmain">
+            <div fxLayout="row">
+                <div fxFlex="40" class="goaltitledetail">Fund to raise</div>
+                <div fxFlex="60" class="goalvaluedetail">${{goal.targetAmount - goal.achievedAmount}}</div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="40" class="goaltitledetail">Goal Expiry date</div>
+                <div fxFlex="60" class="goalvaluedetail">{{goal.expiryDt | date}}</div>
+            </div>
+            <div fxLayout="row">
+                    <div fxFlex="40" class="goaltitledetail">Have Tax Exemption</div>
+                    <div fxFlex="60" class="goalvaluedetail">Yes</div>
+                </div>      
+            <div fxLayout="row">
+                <div fxFlex="40" class="goaltitledetail">Created On</div>
+                <div fxFlex="60" class="goalvaluedetail">{{goal.createdDt | date}}</div>
+            </div>            
+        </div>
+        <div class="buttonstyle">
+            <input type="button" *ngIf="showJoinButton" value="Join Campaign" (click)="onJoinGoal()" class="joinbutton">
+        </div>
+    </div>
+</div>

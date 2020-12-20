@@ -1,0 +1,44 @@
+<div class="goallistmain" fxLayout="column">
+        <div class="mygoaltitle">Social Initiatives – Save Small, Donate BIG</div>
+        <div fxFlex="90" fxLayout="row"> 
+           <div fxFlex="100" fxLayout="column" style="overflow: auto;">
+               <div fxFlex="51" fxLayout="column" class="goalopacity">                   
+                    <div fxLayout ="column wrap" class="mygoallist" *ngFor="let mygoal of goallist; let i = index">
+                        <div  fxLayout="column" class="goalbox">
+                                <div class="goaltitle" fxFlex="25">{{mygoal.capaignName}}</div>
+                                <div class="goaldescription">{{mygoal.campaignDesc}}</div>                               
+                                <div fxLayout="row">
+                                    <div fxLayout="column" fxFlex="30">
+                                        <div class="goalvalue">${{mygoal.targetAmount}}</div>
+                                        <div class="goaldesc" fxFlex="30">Fund to raise</div>
+                                    </div>
+                                    <div fxLayout="column" fxFlex="30">
+                                        <div class="goalvalue">Open</div>
+                                        <div class="goaldesc" fxFlex="30">Status</div>
+                                    </div>
+                                    <div fxLayout="column" fxFlex="30">
+                                        <div class="goalvalue">{{mygoal.memCount}}</div>
+                                        <div class="goaldesc" fxFlex="30">Active Members</div>
+                                    </div>
+                                    <div fxLayout="column" fxFlex="30">
+                                        <div class="goalvalue">{{mygoal.createdDt |date}}</div>
+                                        <div class="goaldesc" fxFlex="40">Start Date</div>
+                                    </div>
+                                    <div fxLayout="column" fxFlex="40">
+                                        <div class="goalvalue">{{mygoal.expiryDt|date}}</div>
+                                        <div class="goaldesc" fxFlex="40">End Date</div>
+                                    </div>
+                                    <div>
+                                        <input type="button" class="viewmorebutton" (click)="onJoinGoal(mygoal)" value="Join Initiative">
+                                    </div>
+                                </div>                 
+                                                
+                        </div>
+                    </div>                    
+                </div>
+                
+           </div>
+               
+        </div>   
+    </div>
+    

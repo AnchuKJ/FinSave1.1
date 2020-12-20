@@ -1,0 +1,162 @@
+.goaldatamain{
+    border-radius: 16px;    
+    min-height:658px;  
+    max-height: 658px;
+    box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    background-color: white;
+    margin: 0px 50px 0px 50px;
+    opacity: .8;
+
+    .goalbg{
+      overflow: auto;
+    }
+    .wrap{
+        flex-wrap:wrap;
+        max-height: 580px;
+    }
+    .mygoaltitle{
+        border-radius: 16px 16px 0px 0px;
+        color: white;
+        font-size: 18pt;
+        padding: 20px;
+        //background-image: linear-gradient(to left, #7a03ae, #872cab, #9144a8, #995aa6, #9f6ea4);
+        
+       background-image: linear-gradient(to left, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+    }
+    .rightdiv{
+        border-radius: 0px 0px 16px 0px;
+        padding: 25px 0px 0px 25px;
+        background: linear-gradient(to bottom, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f); 
+        .goaltitle{
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .goalchart{
+            margin: 20px 0px 10px 0px;
+        }
+
+        .mygoaldetailmain{
+            color: #ffffff;
+            padding-top: 30px;
+            line-height: 3; 
+            .mygoaltitledetail{
+                opacity: .6;
+            }
+            .mygoalvaluedetail{
+                opacity: .8;
+            }
+        }
+    }
+
+    
+    .goalbox{
+        margin: 10px 40px 0px 40px;
+        border-radius: 15px;
+        padding: 15px 0px 0px 10px;
+        color: white;
+        height: 150px;
+        min-width: 200px;
+        box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);        
+        text-align: end;
+        .stackedchart{
+            height: 30px;
+        }
+        .contributiondiv{
+            font-size: 10pt;
+            opacity: .8;
+            text-align: left;
+            padding-left: 15px;
+        }
+        .radiostyle{
+            float: left;    
+        }
+        .goalvalue{
+            font-size: 15pt;
+            font-weight: bold;
+            opacity: 0.9;
+            text-align: left;
+            margin: 0px 0px 5px 15px;
+           // margin: 15px 0px 5px 15px;
+        }
+        .goaldesc{
+            font-size: 13pt;
+            text-align: left;
+            line-height: 1.5;
+            opacity: 0.8;
+            margin-left: 15px;
+        }
+        .goalamount{
+            font-size: 13pt;
+            text-align: left;
+            line-height: 1.5;
+            opacity: 1;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+    }
+    .mygoallist{
+        padding: 20px;
+        text-align: center;
+        flex-wrap:wrap;
+    }
+    .goalopacity{
+        z-index: 1000;
+    }
+    .goalbox1{
+        background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+    }
+    .goalbox2{
+        background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+    }
+    .goalbox3{
+        background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+    }
+    .goalbox4{
+        background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+    }
+    .goalbox5{
+        background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+    }
+    .goalbox6{
+        background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+    }
+}
+
+::ng-deep{
+.mat-radio-container .mat-radio-outer-circle{
+    border-color:white !important;
+}
+.mat-radio-checked .mat-radio-inner-circle{
+    background-color: white !important;
+}
+
+    .advanced-pie-legend .total-value, .advanced-pie-legend .total-label, .legend-item{  color: #fff !important;  }
+    .item-label{
+        margin: 8px 0px 20px 0px !important;
+    }
+    .total-value{
+        display: none !important;
+    }
+    .item-value{
+        margin-top: -4px !important;
+       
+    }
+    .advanced-pie-legend .legend-items-container .legend-items .legend-item{
+        display: block !important;
+    }
+    .item-percent{
+        display: none !important;
+    }
+    .total-label{
+        opacity: .7 !important;
+        display: none !important;
+        margin-left: 5px !important;
+    }
+    .item-percent{
+        font-size: 20px !important;
+        margin-left: 15px !important;
+    }
+
+
+}

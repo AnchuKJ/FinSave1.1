@@ -1,0 +1,89 @@
+.goallistmain{
+    border-radius: 16px;    
+    min-height:658px;  
+    max-height: 658px;
+    box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    background-color: white;
+    margin: 0px 50px 0px 50px;
+    opacity: .8;
+    .wrap{
+        flex-wrap:wrap;
+    }
+    .imgstyle{
+        height:585px;
+        border-radius: 0px 0px 16px 0px;
+    }
+    .mygoaltitle{
+        border-radius: 16px 16px 0px 0px;
+        color: white;
+        font-size: 18pt;
+        padding: 20px;
+        background-image: linear-gradient(to left, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+    }
+    .goalbox{
+        margin: 30px 40px 10px 40px;
+        border-radius: 15px;
+       // padding: 15px 0px 10px 10px;
+        color: black;
+        height: 170px;
+        min-width: 250px;
+        box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);        
+        text-align: start;
+        .goaltitle{
+            font-weight: bold;
+            background-image: linear-gradient(to left, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+            max-height: 28%;
+            color: white;
+            padding: 10px;
+            border-radius: 16px 16px 0px 0px;
+        }
+        .goalvalue{
+            font-size: 10pt;
+            font-weight: bold;
+            opacity: 1;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+        .goaldescription{
+            font-size: 10pt;
+            opacity: 1;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+        .goaldesc{
+            font-size: 9pt;
+            opacity: 0.8;
+            margin-left: 15px;
+        }
+      .viewmorebutton{    
+        font-weight: bold;
+        background: #7C1888 0% 0% no-repeat padding-box;
+        width: 119px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-right: 15px;
+        color: white;
+        height: 30px;
+      }
+    }
+    .goalbox1{
+        background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+    }
+    .goalbox2{
+        background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+    }
+    .goalbox3{
+        background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+    }
+    .goalbox4{
+        background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+    }
+    .goalbox5{
+        background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+    }
+    .goalbox6{
+        background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+    }
+}

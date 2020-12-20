@@ -1,0 +1,23 @@
+#login-form{
+    margin:100px auto;
+    width: 577px;
+    padding: 60px;
+    border-radius: 16px;
+    background-image: linear-gradient(to top, #e283e6, #d473f7, #d8a8ff, #e6d5ff, #e0cece);
+    .logo{
+        text-align: center;
+    }
+    .submit-button{
+        width: 200px;
+        height: 50px;
+        margin: 10px auto;
+        border-radius: 20px;
+        background-color: #7C1888;
+        color: white;
+    }   
+}
+::ng-deep{
+    .mat-form-field-outline{
+        background-color: white !important;
+    }
+   }

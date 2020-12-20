@@ -1,0 +1,114 @@
+<mat-dialog-content class="dialogcontent">
+    <div fxLayout="row" class="dialogtitlediv">
+        <div class="dialogtitle" fxFlex="95">Join the Initiative - {{goal.capaignName}}</div>
+        <div class="closediv"><mat-icon class="closeicon" [mat-dialog-close]="true" >close</mat-icon></div>
+    </div>
+    <div fxLayout="row" class="goalheader">
+        <div fxLayout="column" fxFlex="30">
+            <div class="value">${{goal.targetAmount}}</div>
+            <div class="title">Fund to raise</div>
+        </div>
+        <div fxLayout="column" fxFlex="30">
+            <div class="value">{{goal.memCount}}</div>
+            <div class="title">Active Members</div>
+        </div>
+        <div fxLayout="column" fxFlex="30">
+            <div class="value">{{goal.createdDt |date}}</div>
+            <div class="title">Start Date</div>
+        </div>
+        <div fxLayout="column" fxFlex="30">
+            <div class="value">{{goal.expiryDt|date}}</div>
+            <div class="title">End Date</div>
+        </div>
+    </div>
+    <div fxLayout="row" class="dialogbody">  
+        <div fxFlex="70" fxLayout="column">  
+            <div fxLayout="row">
+                <div fxFlex="50" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">My Donation</div>
+                    <div class="leftdesc">Set the maximum amount you’d like to donate to this cause.</div>    
+                </div>
+                <div fxFlex="50" class="rightsection">
+                    <input [(ngModel)]="maxContribution" (change)="onMaxContributionChange()">
+                </div>
+            </div>
+            <div fxFlex="70" fxLayout="row">
+                <div fxFlex="50" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">Rounding Frequency</div>
+                    <div class="leftdesc">Select when to round your account balances.</div>    
+                </div>
+                <div fxFlex="50" class="rightsection">
+                    <mat-radio-group (change)="onSelectChange()" [(ngModel)]="roundfrequency" class="radiogroup">
+                        <mat-radio-button value="3">Every transaction</mat-radio-button>
+                        <mat-radio-button value="1">End of the Day</mat-radio-button>
+                        <mat-radio-button value="2">End of the Month</mat-radio-button>                       
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="50" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">Rounding Amount</div>
+                    <div class="leftdesc">Set the nearest round figure (multiples of 10) to round the account balance.</div>    
+                </div>
+                <div fxFlex="50" class="rightsection">              
+                    <input (change)="onSelectChange()" [(ngModel)]="roundamount">
+                </div>
+            </div>
+           
+            <div fxLayout="row">
+                <div fxFlex="50" class="leftsection" fxLayout="column">
+                    <div class="lefttitle">Due date</div>
+                    <div class="leftdesc">Set the date that you’d like to finish saving for the donation.
+                    </div>    
+                </div>
+                <div fxFlex="50" class="rightsection">
+                        <mat-form-field style="max-width: 72%; margin-left: 2rem;" class="due-date" appearance="outline" class="pr-sm-8" fxFlex="50">
+                            <mat-label>Due date</mat-label>
+                            <input matInput (ngModelChange)="onDateChange($event)" [matDatepicker]="endDatePicker" [(ngModel)]="duedate">
+                            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+                            <mat-datepicker #endDatePicker></mat-datepicker>
+                        </mat-form-field>
+               <!-- <select [(ngModel)] = "duedate" (change)="onSelectChange()">
+                        <option value="1">1 month</option>
+                        <option value="2">2 months</option>
+                        <option value="3">3 months</option>
+                        <option value="6">6 months</option>
+                        <option value="12">12 months</option>
+                    </select>-->
+                </div>
+            </div>
+        </div>   
+        <div fxFlex="30" fxLayout="column" *ngIf="!loadedonly">
+            <div class="predictiontitle">Predicted Contribution</div>
+            <div class="predictedscore">${{predictedAmount}}</div>
+            <div *ngIf="!isGoodPrediction">
+                <div style="text-align:center"><img class="warningimg" src="assets/warning.jpg"></div>
+                <div class="suggestpred">We’ve done a quick analysis, it looks like you may fall short of the targeted amount.<br/>
+                <h2>Hmmm! How about tweaking your options a bit?</h2></div>
+                <div class="suggestiontitle">Suggestions:</div>
+                <div class="suggestdata">Adjust the rounding amount</div>
+                <div class="suggestdata">Adjust the due date</div>
+            </div>
+            <div *ngIf="isGoodPrediction">
+                    <div style="text-align:center"><img class="warningimg" src="assets/tick.png"></div>
+                    <div class="goodprediction">We’ve done a quick analysis, and it looks like you’ll be able to save the amount on time.
+                        <h2>Yaay! You are good to go!</h2>
+                    </div>
+            </div>
+        </div>
+        <div fxFlex="30" fxLayout="column" *ngIf="loadedonly">
+                <div class="loadedtext">
+                        Waiting for Analysis...
+                   </div>
+            <div fxFlex="30" class="loaded" fxLayout="row">
+               <mat-icon>extension</mat-icon>               
+           </div>  
+           
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <div class="cancel" [mat-dialog-close]="true">Cancel</div>
+    <div class="submit" (click)="onapplyclick()">Apply</div>
+</mat-dialog-actions>

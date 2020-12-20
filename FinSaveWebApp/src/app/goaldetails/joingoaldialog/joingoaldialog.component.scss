@@ -1,0 +1,176 @@
+.dialogtitlediv{
+    background-image: linear-gradient(to left, #7a03ae, #872cab, #9144a8, #995aa6, #9f6ea4);
+    padding: 10px;
+    .dialogtitle{
+        color: white;
+        font-weight: bold;
+        font-size: 23px;
+        margin-left: 12px;
+        margin-bottom: 5px;
+        opacity: 1  ;
+    }
+   .closediv{
+        border: 1px solid #694ED6;
+        border-radius: 50%;
+        padding: 4px 0px 0px 0px;
+        opacity: .8;
+        text-align: center;
+        .closeicon{
+            color: #ffffff;
+            font-size: 16px;
+            height: 0px;
+            cursor: pointer;
+        }
+    }    
+}
+.goalheader{    
+    background-image: linear-gradient(to left, #7a03ae, #872cab, #9144a8, #995aa6, #9f6ea4);
+    padding:0px 0px 10px 20px;
+    color: white;
+    .title{
+        opacity: .8;      
+        font-size: 9pt; 
+    }
+    .value{
+        font-weight: bold;
+        line-height: 2;
+        font-size: 10pt;
+    }
+}
+.dialogbody{
+  
+    .radiogroup{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        line-height: 3;
+    }
+    .leftsection{
+        padding:20px 50px;
+        line-height: 1.5;
+        .lefttitle{
+            font-weight: bold;
+        }
+        .leftdesc{
+            
+        }
+    }
+
+   
+    .rightsection{
+        padding: 15px 10px 30px 20px;
+        background-color:  #995aa6;
+        input{
+            height: 40px;
+            width: 310px;
+            font-size: 12pt;
+        }
+        select{
+            height: 40px;
+            width: 315px;
+            font-size: 12pt;
+        }
+        .mat-form-field{
+            min-width: 320px !important;
+            margin-left: 0px !important;
+         
+            border-color: black !important;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-flex {
+            background: white !important;
+        }            
+    }   
+   
+}
+.warningimg{
+    
+    //margin-left: 120px;
+    height: 70px;
+    margin-top: 15px;
+}
+.goodprediction{
+    color: green; 
+    padding: 40px 10px 10px 35px;
+}
+.suggestpred{
+    color: #EE5A0A;
+    padding: 20px 10px 0px 35px;
+}
+.predictiontitle{
+    text-align: center;
+    padding-top: 34px;
+    font-size: 15pt;
+    font-weight: bold;
+} 
+.predictedscore{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 25pt;
+    font-weight: bold;
+}   
+.suggestiontitle{
+    padding: 10px 0px 10px 35px;
+    font-weight: bold;
+}
+.suggestdata{
+    padding: 10px 0px 10px 35px;
+}
+.mat-dialog-content, .mat-dialog-container{
+    margin: 0px !important;
+    padding: 0px !important;
+    border-bottom: 1px solid #995aa6;
+    max-height: 88vh;
+}
+
+.mat-dialog-container{
+    border-radius: 16px;
+}
+
+.submit{
+    border-radius: 17px;
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 196px;
+    text-align: center;
+    height: 24px;
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    color:#ffff;
+    margin-left:10px;
+    background: #7C1888 0% 0% no-repeat padding-box;
+    cursor: pointer;
+}
+.cancel{
+border: 1px solid #7C1888;
+border-radius: 17px;
+width: 196px;
+text-align: center;
+height: 24px;
+padding-top: 8px;
+font-weight: bold;
+font-size: 13px;
+color:#7C1888;
+cursor: pointer;
+margin-top: 15px;
+}
+.mat-radio-container .mat-radio-outer-circle{
+    border-color:white !important;
+}
+
+.loaded{
+    mat-icon{
+        color: #995aa6;
+        font-size: 110pt;
+        margin-left: 102px;
+        margin-top: 40px;
+    }
+}
+
+.loadedtext{
+    color: #995aa6;
+    margin-top: 155px;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-left: 51px;
+}

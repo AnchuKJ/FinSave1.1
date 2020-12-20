@@ -1,0 +1,117 @@
+.detailswindow{
+    margin: 0px 50px 0px 50px;
+    min-height:658px;  
+    border-radius: 16px;
+    box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    .firstdetail{
+        background-color: white;
+        opacity: .8;
+        border-radius: 16px 0px 0px 16px;
+        
+        .imgbanner{
+            border-radius: 0px 0px 0px 16px;
+        }
+        .goaltitlearea{
+            border-radius: 16px 0px 0px;
+            font-size: 20pt;
+            background-image: linear-gradient(to left, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+            margin-bottom: 70px;
+        }
+        .goalname{
+            color: #ffffff;
+            margin: 20px 20px 0px 40px;
+            text-shadow: 1px 1px #B245B7;
+        }
+        .goaldesc{
+            font-size: 20px;
+            margin: 0px 20px 0px 40px;
+            opacity: .8;
+            color: black;
+            border-top: solid 1px #B245B7;
+            padding-top:20px; 
+        }
+
+        .box{
+            margin: 10px 40px 40px 40px;
+            border-radius: 15px;
+            padding: 15px 0px 0px 10px;
+            color: white;
+            text-align: center;
+            box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+            .accountvalue{
+                font-size: 18pt;
+                font-weight: bold;
+                opacity: 0.9;
+                margin-bottom: 15px;
+            }
+            .accountdesc{
+                font-size: 12pt;
+                opacity: 0.6;
+            }
+        }
+        .box1{
+            background-image: linear-gradient(to right, #ed520e, #e24618, #d63b1e, #c93022, #bc2525);
+        }
+        .box2{
+            background-image: linear-gradient(to right, #7d15aa, #8e18ad, #9e1bb0, #ad20b3, #bc25b5);
+        }
+        .box3{
+            background-image: linear-gradient(to right, #f4ac25, #f49b16, #f48909, #f37703, #f26205);;
+        }
+    }
+    .rightdetail{
+        border-radius: 0px 16px 16px 0px;
+        padding: 25px 0px 0px 25px;
+        background: linear-gradient(to bottom, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f); 
+        .goalrightdetail{
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            
+        }
+        .goaldetailmain{
+            color: white;
+            padding-top: 50px;
+            line-height: 3; 
+            .goaltitledetail{
+                opacity: .6;
+            }
+            .goalvaluedetail{
+                opacity: .8;
+            }
+        }
+        .buttonstyle{
+            margin: auto;
+            .joinbutton{
+                background-color: #57146e;
+                padding: 15px;
+                border-radius: 30px;
+                width:300px;
+                color: white;
+                opacity: .8;
+            }
+        }
+    }
+}
+::ng-deep {
+    .advanced-pie-legend .total-value, .advanced-pie-legend .total-label, .legend-item{  color: #fff !important;  }
+    .item-label{
+        margin-top: 8px !important;
+    }
+    .item-value{
+        margin-top: -4px !important;
+    }
+    .total-value{
+        display: none !important;
+    }
+    .total-label{
+        opacity: .7 !important;
+        display: none !important;
+        margin-left: 5px !important;
+    }
+    .item-percent{
+        font-size: 20px !important;
+        margin-left: 15px !important;
+    }
+}
+

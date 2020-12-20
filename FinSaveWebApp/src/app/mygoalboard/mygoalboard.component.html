@@ -1,0 +1,72 @@
+<div class="goaldatamain" fxLayout="column">
+    <div class="mygoaltitle">My Donations</div>
+    <div fxFlex="90" fxLayout="row"> 
+       <div fxFlex="70" fxLayout="column" class="goalbg">
+           <div fxFlex="100" class="goalopacity">
+                <mat-radio-group class="wrap" [(ngModel)]="goalselected" (change)="ongoalselectionchange()">
+                    <div fxLayout ="row wrap" fxFlex="100" class="mygoallist" *ngFor="let mygoal of mygoallist; let i = index">
+                        <div  fxLayout="column" fxFlex="100" class="goalbox goalbox{{i+1}}">
+                            <div fxLayout="row">
+                                <div class="goalvalue" fxFlex="92">{{mygoal.goalname}}</div>
+                                <div class="radiostyle"> 
+                                    <mat-radio-button value="{{i+1}}"></mat-radio-button>
+                                </div>
+                            </div> 
+                            <div class="goaldesc">{{mygoal.desc}}</div>
+                            <div fxLayout="row">
+                                <div fxFlex="25" fxLayout="column">
+                                    <div class="goalamount">${{mygoal.amount}}</div>
+                                    <div class="contributiondiv">Target Fund</div>
+                                </div>
+                                <div fxFlex="25" fxLayout="column">
+                                    <div class="goalamount">${{mygoal.contributionamount}}</div>
+                                    <div class="contributiondiv">My donation</div>
+                                </div>
+                                <div fxFlex="50" fxLayout="column">
+                                    <div class="stackedchart" ><ngx-charts-bar-horizontal-stacked
+                                        [results]="mygoal.progresschart"
+                                        [legend]="false"
+                                        [scheme]="progressScheme"
+                                        [gradient]="true" 
+                                        [labels]="false"
+                                        ></ngx-charts-bar-horizontal-stacked>  
+                                    </div>
+                                    <div class="contributiondiv">Your Contribution / Target Fund</div>   
+                                </div>
+                            </div>
+                             
+                                    
+                        </div>
+                    </div>
+                </mat-radio-group>
+            </div>
+            
+       </div>
+       <div fxFlex="30" class="rightdiv" fxLayout="column">
+           <div class="goaltitle">Initiative Details</div>
+           <div fxFlex="40" class="goalchart">
+                <ngx-charts-advanced-pie-chart 
+                    [results]="reportdata"
+                    [legend]="false"
+                    [scheme]="progressScheme"
+                    [gradient]="true" 
+                    [labels]="false" >
+                </ngx-charts-advanced-pie-chart>   
+            </div> 
+            <div class="mygoaldetailmain" *ngIf="goal">
+                <div fxLayout="row">
+                    <div fxFlex="40" class="mygoaltitledetail">Fund to raise</div>
+                    <div fxFlex="60" class="mygoalvaluedetail">${{goal.amount - goal.collectedamount}}</div>
+                </div>
+                <div fxLayout="row">
+                    <div fxFlex="40" class="mygoaltitledetail">Expiry date</div>
+                    <div fxFlex="60" class="mygoalvaluedetail">{{goal.expires | date}}</div>
+                </div>
+                <div fxLayout="row">
+                    <div fxFlex="40" class="mygoaltitledetail">Created On</div>
+                    <div fxFlex="60" class="mygoalvaluedetail">{{goal.createdon | date}}</div>
+                </div>            
+            </div>
+       </div>       
+    </div>   
+</div>

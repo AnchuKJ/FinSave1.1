@@ -1,0 +1,104 @@
+.newtransactionwindow{
+    margin: 0px 50px 0px 50px;
+    min-height:658px;  
+    border-radius: 16px;
+    box-shadow: 9px 9px 34px -10px rgba(0,0,0,0.75);
+    .transactiontitle{
+        border-radius: 16px 0px 0px 0px;
+        color: white;
+        font-size: 20pt;
+        padding: 20px;
+        background-image: linear-gradient(to left, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f);
+    }
+    .firstdetail{
+        background-color: white;
+        opacity: .8;
+        border-radius: 16px 0px 0px 16px;
+        .leftsection{
+            padding:20px 50px;
+            line-height: 1.5;
+           // background-color:  #995aa6;
+            color: #5C5150;
+            .lefttitle{
+                font-weight: bold;
+            }
+        }
+        .rightsection{
+            padding: 20px 10px 20px 30px;
+           
+            input{
+                height: 40px;
+                width: 400px;
+            }
+            select{
+                height: 40px;
+                width: 400px;
+            }
+            textarea{
+                height: 150px;
+                width: 400px;
+            }
+            .mat-form-field{
+                min-width: 410px !important;
+                margin-left: 0px !important;
+                border-color: black !important;
+            }
+        }
+    }
+    .rightdetail{
+        border-radius: 0px 16px 16px 0px;
+        padding: 25px 0px 0px 25px;
+        background: linear-gradient(to bottom, #d10ec8, #a518ab, #7c188d, #57146e, #360d4f); 
+        .accounttitle{
+            margin: 10px 0px 20px 15px;
+            font-weight: bold;
+            font-size: 14pt;
+            color: white;
+        }
+        .accountvalue{
+            margin: 10px 0px 10px 15px;
+            font-size: 12pt;
+            color: white;
+        }
+        .accountname{
+            margin: 0px 0px 10px 15px;
+            font-size: 12pt;
+            opacity: .7;
+            color: white;
+        }
+    }
+    .buttonsection{
+        margin: 30px;
+        padding: 40px 0px;
+       border-top: 1px solid #7C1888;
+    }
+    .submit{
+        border-radius: 17px;
+        margin-top: 0px;
+        margin-right: 10px;
+        width: 195px;
+        text-align: center;
+        height: 24px;
+        padding-top: 8px;
+        font-weight: bold;
+        font-size: 13px;
+        color:#ffff;
+        margin-left:15px;
+        background: #7C1888 0% 0% no-repeat padding-box;
+        cursor: pointer;
+    }
+    .cancel{
+    border: 1px solid #7C1888;
+    border-radius: 17px;
+    width: 195px;
+    text-align: center;
+    height: 24px;
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    color:#7C1888;
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 0px;
+    }
+}
